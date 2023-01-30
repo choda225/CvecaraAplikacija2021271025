@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/praznaTxt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="16dp"
+    tools:context=".project.Activity.Activities.CartListActivity"
+    tools:layout_marginEnd="16dp">
+
+    <ScrollView
+        android:id="@+id/viewScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Moja korpa"
+                android:textAlignment="center"
+                android:textColor="#f44336"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ukupnoTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Stavke ukupno:"
+                    android:textColor="#3F466C"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:id="@+id/stTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0RSD"
+                    android:textColor="#3F466C"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/uslugaTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Usluga dostave:"
+                    android:textColor="#3F466C"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:id="@+id/taxxTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0RSD"
+                    android:textColor="#3F466C"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/taaxTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Taksa:"
+                    android:textColor="#3F466C"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/taksaTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0RSD"
+                    android:textColor="#3F466C"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/svetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ukupno:"
+                    android:textColor="#3F466C"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:id="@+id/SveUkupnoTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0RSD"
+                    android:textColor="#3F466C"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/rose_button"
+                android:gravity="center"
+                android:text="Provera"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vaša korpa je prazna"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            android:backgroundTint="#f6f6f6"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/hhomeBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    tools:ignore="DuplicateIds">
+
+                    <ImageView
+                        android:id="@+id/imsageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="86dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/home"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textttView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Profil"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp"
+                        tools:ignore="DuplicateIds" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hommeBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    tools:ignore="DuplicateIds">
+
+                    <ImageView
+                        android:layout_height="75dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/user"  />
+
+                    <TextView
+                        android:id="@+id/textVview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Profil"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp"
+                        tools:ignore="DuplicateIds" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profileBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageViiew3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/btn1"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textViewww2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp"
+                        tools:ignore="DuplicateIds" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/supportBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iiimageVieww3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/email"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/teextVieww2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Podrska"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp"
+                        tools:ignore="DuplicateIds" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settingBtnBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imaggeView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/setting"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textVieew2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Podesavanja"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp"
+                        tools:ignore="DuplicateIds" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ffd700"
+            android:elevation="3dp"
+            android:src="@drawable/shopping_basket"
+            app:layout_anchor="@+id/app_bar"
+            app:maxImageSize="30dp"
+
+            app:tint="#ffffff"
+            android:contentDescription="TODO">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
